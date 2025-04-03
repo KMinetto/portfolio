@@ -53,6 +53,7 @@ export default {
     color: white;
     text-align: center;
     padding: 2rem;
+    z-index: 2;
   }
 
   .contact-overlay {
@@ -142,11 +143,12 @@ export default {
   /* Responsive */
   @media (max-width: 768px) {
     .contact-content h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     
     .contact-link {
       font-size: 1rem;
+      margin: 0;
     }
   }
 </style>
