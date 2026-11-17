@@ -16,30 +16,30 @@ export default {
     const projects = ref([
       {
         id: 1,
-        title: "Oxipoxy",
-        description: "E-commerce réalisé pour un client",
-        tags: ["Symfony", "Responsive", "Stripe", "Database", "Docker"],
+        title: "Les Bebous Kawai",
+        description: "Projet e-commerce réalisé pour un client",
+        tags: ["Symfony", "Responsive", "Stripe", "Database", "Docker", "Nuxt.js", "API"],
         github: null,
-        live: "https://oxipoxy.fr",
-        image: new URL('@/assets/img/oxipoxy.jpg', import.meta.url).href
+        live: "https://lesbebouskawai.com/",
+        image: new URL('@/assets/img/lesbebouskawai.webp', import.meta.url).href
       },
       {
         id: 2,
         title: "Solar System",
         description: "Projet personnel ThreeJs du système solaire",
-        tags: ["Threejs", "Node.js"],
+        tags: ["Three.js", "Node.js"],
         github: "https://github.com/Kilian-MINETTO-E-I/SolarSystem",
         live: "https://solar-system-vert-eta.vercel.app/", // Pas de version en ligne
         image: new URL('@/assets/img/solarsystem.jpg', import.meta.url).href
       },
       {
         id: 3,
-        title: "Movie App",
-        description: "Projet NuxtJs, site de référencement de films",
-        tags: ["Nuxtjs"],
-        github: "https://github.com/KMinetto/InvoiceApp", // Code privé
-        live: null,
-        image: new URL('@/assets/img/movie-app.jpg', import.meta.url).href
+        title: "Earth",
+        description: "Projet Three.js de la terre, réalisé avec des shaders",
+        tags: ["Three.js", "GLSL", "Shaders"],
+        github: "https://github.com/KMinetto/Earth",
+        live: "https://earth-wine.vercel.app/",
+        image: new URL('@/assets/img/earth.webp', import.meta.url).href
       },
       {
         id: 4,
@@ -49,6 +49,15 @@ export default {
         github: null, // Code privé
         live: null,
         image: new URL('@/assets/img/soiechic.jpg', import.meta.url).href
+      },
+      {
+        id: 5,
+        title: "Galaxy Generator",
+        description: "Projet Three.js où l'on peut créer une galaxie.",
+        tags: ["Three.js", "Node.js"],
+        github: "https://github.com/KMinetto/Galaxy-Generator",
+        live: "https://galaxy-generator-eight-delta.vercel.app/",
+        image: new URL('@/assets/img/galaxy.webp', import.meta.url).href
       }
     ])
     const activeFilter = ref('all')
@@ -73,7 +82,7 @@ export default {
     
     <div class="filter-buttons">
       <button 
-        v-for="tag in ['all', 'Symfony', 'Threejs', 'Nuxtjs', 'Database', 'Docker']"
+        v-for="tag in ['all', 'Symfony', 'Three.js', 'Nuxt.js', 'Database', 'Docker', 'API']"
         :key="tag"
         @click="activeFilter = tag"
         :class="{ active: activeFilter === tag }"

@@ -1,5 +1,4 @@
 <script>
-import { ref } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faHtml5, faCss3Alt, faJsSquare, faVuejs, faPhp, faSymfony, faDocker } from '@fortawesome/free-brands-svg-icons';
